@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmAdviseD - Suma con PHP</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Bebas+Neue&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Courier Prime', monospace;
+            background: #1a1a1a;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .contenedor {
+            background: #f5f0e8;
+            border: 5px solid #5c8a4d;
+            box-shadow: 15px 15px 0 #3d5c33;
+            max-width: 420px;
+            width: 100%;
+        }
+        
+        .titulo {
+            background: #5c8a4d;
+            padding: 25px;
+            border-bottom: 5px solid #3d5c33;
+        }
+        
+        h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2rem;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .subtitulo {
+            color: #d4ecc8;
+            font-size: 0.8rem;
+            margin-top: 5px;
+        }
+        
+        form {
+            padding: 30px;
+        }
+        
+        .grupo {
+            margin-bottom: 22px;
+        }
+        
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+        }
+        
+        input[type="number"] {
+            width: 100%;
+            padding: 14px;
+            font-family: 'Courier Prime', monospace;
+            font-size: 1.1rem;
+            border: 3px solid #1a1a1a;
+            background: #fff;
+        }
+        
+        input[type="number"]:focus {
+            outline: none;
+            border-color: #5c8a4d;
+            box-shadow: 4px 4px 0 #5c8a4d;
+        }
+        
+        button {
+            width: 100%;
+            padding: 16px;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            background: #3d5c33;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: all 0.15s ease;
+        }
+        
+        button:hover {
+            background: #5c8a4d;
+            transform: translate(-2px, -2px);
+            box-shadow: 4px 4px 0 #1a1a1a;
+        }
+        
+        .nota {
+            background: #fffbf5;
+            border-left: 4px solid #5c8a4d;
+            padding: 12px;
+            margin-top: 20px;
+            font-size: 0.8rem;
+            color: #555;
+        }
+        
+        .pie {
+            background: #1a1a1a;
+            color: #777;
+            padding: 12px;
+            text-align: center;
+            font-size: 0.7rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="titulo">
+            <h1>Suma con PHP</h1>
+            <p class="subtitulo">Envío de datos al servidor</p>
+        </div>
+        
+        <form action="sumar.php" method="POST">
+            <div class="grupo">
+                <label for="numero1">Número 1:</label>
+                <input type="number" name="numero1" id="numero1" step="any" required>
+            </div>
+            
+            <div class="grupo">
+                <label for="numero2">Número 2:</label>
+                <input type="number" name="numero2" id="numero2" step="any" required>
+            </div>
+            
+            <button type="submit">Calcular Suma</button>
+            
+            <div class="nota">
+                <strong>Nota:</strong> Este formulario envía los datos a sumar.php 
+                mediante el método POST. Asegúrate de tener Apache activo en XAMPP.
+            </div>
+        </form>
+        
+        <div class="pie">
+            FarmAdviseD
+        </div>
+    </div>
+</body>
+</html>

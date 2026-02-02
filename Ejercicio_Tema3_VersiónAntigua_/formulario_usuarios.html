@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmAdviseD - Registro de Usuario</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Bebas+Neue&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Courier Prime', monospace;
+            background: #0d1117;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background-image: 
+                linear-gradient(90deg, #161b22 1px, transparent 1px),
+                linear-gradient(#161b22 1px, transparent 1px);
+            background-size: 25px 25px;
+        }
+        
+        .registro {
+            background: #f5f0e8;
+            border: 5px solid #8b5a2b;
+            box-shadow: 15px 15px 0 #5c3a1d;
+            max-width: 450px;
+            width: 100%;
+        }
+        
+        .encabezado {
+            background: #8b5a2b;
+            padding: 25px;
+            border-bottom: 5px solid #5c3a1d;
+        }
+        
+        h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.2rem;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .subtexto {
+            color: #e8d4b8;
+            font-size: 0.8rem;
+            margin-top: 5px;
+        }
+        
+        form {
+            padding: 35px;
+        }
+        
+        .campo {
+            margin-bottom: 25px;
+        }
+        
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            color: #1a1a1a;
+        }
+        
+        input[type="text"],
+        input[type="email"] {
+            width: 100%;
+            padding: 15px;
+            font-family: 'Courier Prime', monospace;
+            font-size: 1rem;
+            border: 3px solid #1a1a1a;
+            background: #fff;
+        }
+        
+        input:focus {
+            outline: none;
+            border-color: #8b5a2b;
+            box-shadow: 5px 5px 0 #8b5a2b;
+        }
+        
+        button {
+            width: 100%;
+            padding: 18px;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            background: #5c3a1d;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: all 0.15s ease;
+        }
+        
+        button:hover {
+            background: #8b5a2b;
+            transform: translate(-3px, -3px);
+            box-shadow: 6px 6px 0 #1a1a1a;
+        }
+        
+        .info-db {
+            background: #1a1a1a;
+            color: #aaa;
+            padding: 15px;
+            margin-top: 25px;
+            font-size: 0.75rem;
+            border-left: 4px solid #8b5a2b;
+        }
+        
+        .info-db code {
+            color: #8b5a2b;
+            background: #2a2a2a;
+            padding: 2px 6px;
+        }
+        
+        .pie {
+            background: #1a1a1a;
+            color: #666;
+            padding: 12px;
+            text-align: center;
+            font-size: 0.7rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="registro">
+        <div class="encabezado">
+            <h1>Registro de Usuario</h1>
+            <p class="subtexto">Guarda tus datos en MySQL</p>
+        </div>
+        
+        <form action="guardar_usuario.php" method="POST">
+            <div class="campo">
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" id="nombre" placeholder="Tu nombre completo" required>
+            </div>
+            
+            <div class="campo">
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" name="email" id="email" placeholder="correo@ejemplo.com" required>
+            </div>
+            
+            <button type="submit">Guardar Usuario</button>
+            
+            <div class="info-db">
+                <strong>Base de datos:</strong> <code>ejercicios</code><br>
+                <strong>Tabla:</strong> <code>usuarios</code><br>
+                Asegúrate de crear la BD y tabla antes de usar este formulario.
+            </div>
+        </form>
+        
+        <div class="pie">
+            FarmAdviseD
+        </div>
+    </div>
+</body>
+</html>
