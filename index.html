@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmAdviseD - Consejos de Salud</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__logo">
+            <h1>FarmAdviseD</h1>
+            <span>Tu guía de bienestar</span>
+        </div>
+        <nav class="header__nav">
+            <ul>
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="consejos.html">Consejos</a></li>
+                <li><a href="registro.html">Registro</a></li>
+                <li><a href="login.html">Acceder</a></li>
+            </ul>
+        </nav>
+        <button class="header__menu-btn" id="menuBtn">☰</button>
+    </header>
+
+    <main class="main">
+        <section class="hero">
+            <h2>Bienvenido a FarmAdviseD</h2>
+            <p>Descubre consejos prácticos para mejorar tu salud y bienestar de forma natural y sencilla.</p>
+            <a href="registro.html" class="btn">Únete ahora</a>
+        </section>
+
+        <section class="categorias">
+            <h2>Categorías</h2>
+            <div class="categorias__grid" id="categoriasGrid">
+                <!-- Se cargan con AJAX -->
+            </div>
+            <p class="categorias__loading" id="loading">Cargando categorías...</p>
+        </section>
+
+        <section class="destacados">
+            <h2>Consejos Destacados</h2>
+            <div class="destacados__lista">
+                <article class="consejo-card">
+                    <span class="consejo-card__tag">Nutrición</span>
+                    <h3>Hidratación diaria</h3>
+                    <p>Beber al menos 2 litros de agua al día mejora la concentración y la salud de la piel.</p>
+                </article>
+                <article class="consejo-card">
+                    <span class="consejo-card__tag">Ejercicio</span>
+                    <h3>30 minutos al día</h3>
+                    <p>Caminar media hora diaria reduce el riesgo de enfermedades cardiovasculares.</p>
+                </article>
+                <article class="consejo-card">
+                    <span class="consejo-card__tag">Descanso</span>
+                    <h3>Rutina de sueño</h3>
+                    <p>Dormir 7-8 horas y mantener horarios regulares mejora tu energía y estado de ánimo.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2025 FarmAdviseD - Proyecto Ingeniería Web</p>
+        <p>Desarrollado con HTML, CSS, JavaScript, PHP y MySQL</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

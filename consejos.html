@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consejos - FarmAdviseD</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__logo">
+            <h1>FarmAdviseD</h1>
+            <span>Tu guía de bienestar</span>
+        </div>
+        <nav class="header__nav">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="consejos.html" class="active">Consejos</a></li>
+                <li><a href="registro.html">Registro</a></li>
+                <li><a href="login.html">Acceder</a></li>
+            </ul>
+        </nav>
+        <button class="header__menu-btn" id="menuBtn">☰</button>
+    </header>
+
+    <main class="main">
+        <section>
+            <h2 style="color: var(--color-primary); margin-bottom: 1rem;">Consejos de Salud</h2>
+            
+            <div class="filtros">
+                <select id="filtroCategoria">
+                    <option value="">Todas las categorías</option>
+                </select>
+            </div>
+
+            <div class="consejos-lista" id="consejosLista">
+                <!-- Se cargan con AJAX -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2025 FarmAdviseD - Proyecto Ingeniería Web</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
